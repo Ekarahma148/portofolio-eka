@@ -1,0 +1,377 @@
+@import 'tailwindcss';
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+
+    background:#020617;
+
+    color:white;
+
+    font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+    overflow-x:hidden;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+::selection{
+    background:#2563eb;
+    color:white;
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3b82f6;
+
+}
+
+/* ===========================
+LINK
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+IMAGE
+=========================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ===========================
+ANIMATION
+=========================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.float{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        opacity:.3;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:.6;
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:.3;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.glow{
+
+    animation:pulseGlow 5s infinite;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes rotateSlow{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.rotate-slow{
+
+    animation:rotateSlow 25s linear infinite;
+
+}
+
+@keyframes gradient{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+.gradient-text{
+
+    background:linear-gradient(
+        90deg,
+        #38bdf8,
+        #2563eb,
+        #06b6d4,
+        #38bdf8
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:gradient 6s ease infinite;
+
+}
+
+/* ===========================
+GLASS
+=========================== */
+
+.glass{
+
+    background:rgba(15,23,42,.6);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+.btn{
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.card{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+SECTION
+=========================== */
+
+section{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ===========================
+BACKGROUND GRID
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.04) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.04) 1px,
+        transparent 1px
+    );
+
+    background-size:50px 50px;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+/* ===========================
+BACKGROUND LIGHT
+=========================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:999px;
+
+    background:#2563eb22;
+
+    filter:blur(180px);
+
+    left:-200px;
+
+    top:-200px;
+
+    z-index:-3;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        line-height:1.2;
+
+    }
+
+    section{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+}
