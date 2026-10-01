@@ -24,7 +24,7 @@ export const profile = {
 
   github: "https://github.com/Ekarahma148",
 
-  linkedin: "https://linkedin.com/in/username",
+  linkedin: "www.linkedin.com/in/eka-rahma-31a9ab390",
 
   instagram: "https://instagram.com/ekarhma_14",
 
@@ -115,6 +115,7 @@ export const skills = [
       "REST API",
       "JWT Authentication",
       "Microservices",
+      "express"
     ],
   },
   {
@@ -131,7 +132,7 @@ export const skills = [
       "VS Code",
       "Postman",
       "IntelliJ IDEA",
-      "Figma",
+      "Docker"
     ],
   },
 ];
@@ -243,7 +244,8 @@ export const instructor = [
       "JWT",
       "CRUD",
       "Deployment",
-      "Reusable Component"
+      "Reusable Component",
+      "Express"
     ]
   }
 ];
@@ -258,7 +260,7 @@ export const projects = [
 
     subtitle: "Full Stack Web Application",
 
-    image: "../public/1.png",
+    image: "/1.png",
 
     description:
       "Aplikasi manajemen tugas berbasis React dan Spring Boot dengan autentikasi JWT menggunakan arsitektur Microservices.",
@@ -282,7 +284,41 @@ export const projects = [
 
     github: "https://github.com/Ekarahma148/PROJECT.git",
 
-    demo: "#",
+    demo: null,
+  },
+
+  {
+    title: "MyCash",
+
+    subtitle: "Full Stack Financial Management System",
+
+    image: "/mycash.png",
+
+    description:
+      "Aplikasi manajemen keuangan pribadi berbasis Spring Boot dan Thymeleaf untuk mengelola transaksi kas, kategori, budget, jurnal, riwayat, profil, dan aktivitas pengguna.",
+
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Thymeleaf",
+      "MySQL",
+      "Spring Data JPA",
+      "Hibernate",
+      "Docker"
+    ],
+
+    features: [
+      "Authentication",
+      "CRUD Transaksi",
+      "Budgeting",
+      "Kategori Kas",
+      "Jurnal",
+      "Activity Log",
+    ],
+
+    github: "https://github.com/Ekarahma148/mycash.git",
+
+    demo: null,
   },
 
   {
@@ -290,7 +326,7 @@ export const projects = [
 
     subtitle: "Personal Finance Dashboard",
 
-    image: "../public/2.png",
+    image: "/2.png",
 
     description:
       "Aplikasi pencatatan keuangan pribadi dengan fitur pemasukan, pengeluaran, dashboard statistik dan laporan.",
@@ -310,9 +346,9 @@ export const projects = [
       "Report",
     ],
 
-    github: "#",
+    github: "https://github.com/Ekarahma148/ProjectAkt-eka.git",
 
-    demo: "#",
+    demo: null,
   },
 ];
 
@@ -324,53 +360,53 @@ export const certificates = [
   {
     title: "Logika Algoritma",
 
-    image: "../public/C.jpeg"
+    image: "/C.jpeg"
   },
 
   {
     title: "Struktur Data",
 
-    image: "../public/SD.png"
+    image: "/SD.png"
   },
 
   {
     title: "Basis Data",
 
-    image: "../public/BD.jpg"
+    image: "/BD.jpg"
   },
 {
     title: "Web Development (HTML)",
 
-    image: "../public/WEB.jpg"
+    image: "/WEB.jpg"
 },
   {
     title: "Git & GitHub",
 
-    image: "../public/GIT.png"
+    image: "/GIT.png"
   },
 
   {
     title: "React Fundamental",
 
-    image: "../public/JS_FUNDA.jpeg"
+    image: "/JS_FUNDA.jpeg"
   },
 
   {
     title: "React Advanced",
 
-    image: "../public/JS_LAN.jpeg"
+    image: "/JS_LAN.jpeg"
   },
 
   {
     title: "Java Fundamental",
 
-    image: "../public/Java_FUNDA.jpeg"
+    image: "/JAVA_FUNDA.jpeg"
   },
 
   {
     title: "Java Advanced",
 
-    image: "../public/Java_LAN.jpeg"
+    image: "/JAVA_LAN.jpeg"
   }
 ];
 

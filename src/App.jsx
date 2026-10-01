@@ -199,7 +199,6 @@ function HeroContent({ displayText }) {
         {profile.description}
       </p>
       <HeroButtons />
-      <HeroSocial />
     </motion.div>
   );
 }
@@ -224,15 +223,6 @@ function HeroButtons() {
   );
 }
 
-function HeroSocial() {
-  return (
-    <div className="flex gap-5 mt-10">
-      <a href={`mailto:${profile.email}`} aria-label="Email">
-        <Mail className="hover:text-blue-400 duration-300" />
-      </a>
-    </div>
-  );
-}
 
 function HeroImage() {
   return (
