@@ -27,6 +27,7 @@ import {
   Check,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import DemoUnavailable from "./components/DemoUnavailable";
 
 const navItems = [
   "About",
@@ -588,7 +589,7 @@ function Instructor() {
   );
 }
 
-function Projects() {
+function Projects({ onDemoUnavailable }) {
   return (
     <section id="projects" className="py-28 px-6">
       <div className="max-w-7xl mx-auto">
@@ -671,14 +672,26 @@ function Projects() {
                   >
                     GitHub
                   </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition"
-                  >
-                    Live Demo
-                  </a>
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition flex items-center gap-2"
+                    >
+                      Live Demo
+                      <ExternalLink size={17} />
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => onDemoUnavailable(project)}
+                      className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition flex items-center gap-2"
+                    >
+                      Live Demo
+                      <ExternalLink size={17} />
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -828,6 +841,27 @@ function BackToTop() {
 }
 
 export default function App() {
+  const [demoProject, setDemoProject] = useState(null);
+  
+    const handleDemoUnavailable = (project) => {
+      setDemoProject(project);
+      window.scrollTo({ top: 0 });
+    };
+  
+    const handleBackToPortfolio = () => {
+      setDemoProject(null);
+      window.scrollTo({ top: 0 });
+    };
+  
+    if (demoProject) {
+      return (
+        <DemoUnavailable
+          project={demoProject}
+          onBack={handleBackToPortfolio}
+        />
+      );
+    }
+  
   return (
     <main className="bg-slate-950 text-white overflow-hidden">
       <BackgroundGlow />
@@ -840,7 +874,7 @@ export default function App() {
       <Skills />
       <Training />
       <Instructor />
-      <Projects />
+      <Projects onDemoUnavailable={handleDemoUnavailable}/>
       <Certificates />
       <Contact />
 

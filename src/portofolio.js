@@ -29,7 +29,7 @@ export const profile = {
   instagram: "https://instagram.com/ekarhma_14",
 
   description:
-    "Saya adalah Frontend Developer yang memiliki ketertarikan besar pada React.js, Java, dan pengembangan aplikasi modern. Saya dipercaya menjadi Instruktur React Fundamental dan React Lanjutan, membantu peserta memahami konsep React melalui pembelajaran yang terstruktur dan praktik langsung.",
+    "Saya adalah fullstack Developer yang memiliki ketertarikan besar pada React.js, Java, dan pengembangan aplikasi modern. Saya dipercaya menjadi Instruktur React Fundamental dan React Lanjutan, membantu peserta memahami konsep React melalui pembelajaran yang terstruktur dan praktik langsung.",
 
   about: `
 Saya merupakan lulusan Sarjana Akuntansi yang tertarik untuk mendalami dunia software development.
